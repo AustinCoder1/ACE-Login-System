@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 from xlwt import Workbook
@@ -43,6 +43,7 @@ class excelFunctions():
        
     def loginFunction(self, username, password):
         try:
+            security = securityEncryption()
             numRows = self.getDataColumn() + 1
             row = 1
             for rows in range(1, numRows):
