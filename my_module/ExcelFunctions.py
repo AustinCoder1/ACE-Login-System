@@ -46,7 +46,7 @@ class excelFunctions():
             numRows = self.getDataColumn() + 1
             row = 1
             for rows in range(1, numRows):
-                if (self.bookSheet.cell(rows, 1).value == username and self.bookSheet.cell(rows, 2).value == password):
+                if (self.bookSheet.cell(rows, 1).value == username and self.bookSheet.cell(rows, 2).value == security.hashPassword(password)):
                     messagebox.showinfo("ACE LOGIN", "Login Found!")
                     break
                 elif (rows == numRows - 1):
